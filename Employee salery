@@ -1,0 +1,29 @@
+class Main {
+    String name;
+    double salary;
+
+    static String organization = "ABC Company";
+
+    Main(String n, double s) {
+        name = n;
+        salary = s;
+    }
+
+    public static void main(String[] args) {
+        Main e1 = new Main("Rahul", 30000);
+        Main e2 = new Main("Aman", 25000);
+
+        double salary1 = e1.salary;
+        double salary2 = e2.salary;
+
+        System.out.println("Organization: " + organization);
+
+        if (salary1 > salary2) {
+            System.out.println(e1.name + " has a higher salary");
+        } else if (salary2 > salary1) {
+            System.out.println(e2.name + " has a higher salary");
+        } else {
+            System.out.println("Both have equal salaries");
+        }
+    }
+}
