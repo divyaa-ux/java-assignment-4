@@ -1,0 +1,25 @@
+class Main {
+    static String language = "English";
+
+    void countWords(String sentence) {
+        String text = sentence.trim();
+
+        int wordCount;
+
+        if (text.isEmpty()) {
+            wordCount = 0;
+        } else {
+            String[] words = text.split("\\s+");
+            wordCount = words.length;
+        }
+
+        System.out.println("Language: " + language);
+        System.out.println("Sentence: " + sentence);
+        System.out.println("Word Count: " + wordCount);
+    }
+
+    public static void main(String[] args) {
+        Main w = new Main();
+        w.countWords("Java is easy to learn");
+    }
+}
