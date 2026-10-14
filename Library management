@@ -1,0 +1,38 @@
+class Main {
+    int booksAvailable;
+    static String libraryName = "City Library";
+
+    Main(int books) {
+        booksAvailable = books;
+    }
+
+    void issueBook() {
+        if (booksAvailable > 0) {
+            int issuedBooks = 1;
+            booksAvailable = booksAvailable - issuedBooks;
+
+            System.out.println("Book Issued Successfully");
+        } else {
+            System.out.println("No Books Available");
+        }
+
+        System.out.println("Available Books: " + booksAvailable);
+    }
+
+    void returnBook() {
+        int returnedBooks = 1;
+        booksAvailable = booksAvailable + returnedBooks;
+
+        System.out.println("Book Returned Successfully");
+        System.out.println("Available Books: " + booksAvailable);
+    }
+
+    public static void main(String[] args) {
+        Main l = new Main(5);
+
+        System.out.println("Library: " + libraryName);
+
+        l.issueBook();
+        l.returnBook();
+    }
+}
